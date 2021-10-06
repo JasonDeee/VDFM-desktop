@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/VDFM-Desktop/static/css/main.b8f78968.chunk.css",
+    "main.js": "/VDFM-Desktop/static/js/main.77a9e11a.chunk.js",
+    "main.js.map": "/VDFM-Desktop/static/js/main.77a9e11a.chunk.js.map",
+    "runtime-main.js": "/VDFM-Desktop/static/js/runtime-main.1b162b35.js",
+    "runtime-main.js.map": "/VDFM-Desktop/static/js/runtime-main.1b162b35.js.map",
+    "static/js/2.80fb05bf.chunk.js": "/VDFM-Desktop/static/js/2.80fb05bf.chunk.js",
+    "static/js/2.80fb05bf.chunk.js.map": "/VDFM-Desktop/static/js/2.80fb05bf.chunk.js.map",
+    "static/js/3.bad4b425.chunk.js": "/VDFM-Desktop/static/js/3.bad4b425.chunk.js",
+    "static/js/3.bad4b425.chunk.js.map": "/VDFM-Desktop/static/js/3.bad4b425.chunk.js.map",
+    "index.html": "/VDFM-Desktop/index.html",
+    "static/css/main.b8f78968.chunk.css.map": "/VDFM-Desktop/static/css/main.b8f78968.chunk.css.map",
+    "static/js/2.80fb05bf.chunk.js.LICENSE.txt": "/VDFM-Desktop/static/js/2.80fb05bf.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/VDFM-Desktop/static/media/VDFM.3cfbd0bc.svg",
+    "static/media/index.css": "/VDFM-Desktop/static/media/SFUFuturaRegular.7151e536.TTF"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b162b35.js",
+    "static/js/2.80fb05bf.chunk.js",
+    "static/css/main.b8f78968.chunk.css",
+    "static/js/main.77a9e11a.chunk.js"
+  ]
+}
