@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script>
+    var isMobile = /iPhone|iPad|iPod|Windows Phone|Android/i.test(
+      navigator.userAgent
+    );
+    isMobile &&
+      ((window.location.href = "http://m.vdfm.ga/"), console.log(isMobile));
+  </script>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -16,18 +23,8 @@
       Magazine - VDFM
     </title>
     <style>
-      @import url(https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);
+      @import url(https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
       @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
-      * {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        transition: none;
-        font-family: Futura, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        position: relative;
-      }
       @font-face {
         font-family: "Monument Extended";
         src: url(assets/Fonts/MonumentExtended/MonumentExtendedRegular.otf);
@@ -116,6 +113,15 @@
       ::-webkit-scrollbar-thumb {
         background: #151515;
       }
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        transition: none;
+        font-family: Futura, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
       html {
         max-width: 100vw;
         overflow-x: hidden;
@@ -124,7 +130,7 @@
         overflow: overlay;
       }
     </style>
-    <link href="./static/css/main.9f0151fa.chunk.css" rel="stylesheet" />
+    <link href="./static/css/main.2405c054.chunk.css" rel="stylesheet" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -280,6 +286,6 @@
       })([]);
     </script>
     <script src="./static/js/2.362b655b.chunk.js"></script>
-    <script src="./static/js/main.754280ff.chunk.js"></script>
+    <script src="./static/js/main.39e2731f.chunk.js"></script>
   </body>
 </html>
