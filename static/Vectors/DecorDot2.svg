@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 95.92">
+    <defs>
+        <style>
+            .dcd2-1 {
+                fill: none;
+                stroke: #a9a7a7;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 4px;
+            }
+
+            .dcd2-2 {
+                fill: #a9a7a7;
+            }
+        </style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <rect class="dcd2-1" x="20.53" y="20.26" width="57.01" height="57.01"
+                transform="translate(48.85 -20.39) rotate(45)" />
+            <circle class="dcd2-2" cx="49.18" cy="8.38" r="8.38" />
+            <circle class="dcd2-2" cx="88.62" cy="48.91" r="8.38" />
+            <circle class="dcd2-2" cx="49.18" cy="87.54" r="8.38" />
+            <circle class="dcd2-2" cx="8.38" cy="48.91" r="8.38" />
+        </g>
+    </g>
+</svg>
