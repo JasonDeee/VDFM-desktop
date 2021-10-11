@@ -2480,8 +2480,8 @@ svg {
   flex-direction: column;
   -ms-grid-columns: (minmax(480px, 1fr)) [auto-fit];
   grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-  -ms-grid-rows: (480px) [auto-fit];
-  grid-template-rows: repeat(auto-fit, 480px);
+  -ms-grid-rows: (480px) [auto-fill];
+  grid-template-rows: repeat(auto-fill, 480px);
   gap: 15px;
 }
 
@@ -2490,7 +2490,7 @@ svg {
 }
 
 .WhatNew .InBoundLayout .Item {
-  min-height: 50px;
+  min-height: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
