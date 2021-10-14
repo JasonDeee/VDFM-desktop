@@ -8472,16 +8472,19 @@ Dual licensed under the MIT and GPL licenses.
 }.call(this, {}));
 //
 //
+
+//
+// 20.980385065798963, 105.78844061609924 - NIK Tòa Sông Đà
 //
 // 20.980597227612375, 105.78793084435914
 // Học viện Công nghệ Bưu chính viễn thông - LATIDUTE & LONGITUDE location
 //
-// 20.98121722958877, 105.78651951926564 - Center Map location
+// 20.980505276309433, 105.78712633363187 - Center Map location
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById("VDFM_map"), {
     mapId: "99f215073d577b09",
-    center: { lat: 20.98121722958877, lng: 105.78651951926564 },
+    center: { lat: 20.980505276309433, lng: 105.78712633363187 },
     zoom: 18,
     fullscreenControl: false,
     streetViewControl: false,
@@ -8489,7 +8492,7 @@ function initMap() {
   });
 
   const marker = new google.maps.Marker({
-    position: { lat: 20.980597227612375, lng: 105.78793084435914 },
+    position: { lat: 20.980385065798963, lng: 105.78844061609924 },
     map,
     title: "VDFM Hanoi",
     icon: {
