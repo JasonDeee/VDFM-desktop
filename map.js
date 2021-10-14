@@ -8479,7 +8479,7 @@ Dual licensed under the MIT and GPL licenses.
 // 20.9802956175709, 105.78607963699247 - Center Map location
 
 function initMap() {
-  new google.maps.Map(document.getElementById("VDFM_map"), {
+  const map = new google.maps.Map(document.getElementById("VDFM_map"), {
     mapId: "99f215073d577b09",
     center: { lat: 20.9802956175709, lng: 105.78607963699247 },
     zoom: 18,
@@ -8488,7 +8488,7 @@ function initMap() {
     mapTypeControl: false,
   });
 
-  new google.maps.Marker({
+  const marker = new google.maps.Marker({
     position: { lat: 20.980597227612375, lng: 105.78793084435914 },
     map,
     title: "VDFM Hanoi",
@@ -8496,5 +8496,18 @@ function initMap() {
       url: "https://alpha.vdfm.ga/assets/VDFM_MapIcon.svg",
       scaledSize: new google.maps.Size(50, 70),
     },
+    animation: google.maps.Animation.DROP,
+  });
+
+  const infowindow = new google.maps.InfoWindow({
+    content: "VDFM Hanoi",
+  });
+
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+      shouldFocus: false,
+    });
   });
 }
