@@ -8474,14 +8474,14 @@ Dual licensed under the MIT and GPL licenses.
 //
 //
 // 20.980597227612375, 105.78793084435914
-// Học viện Công nghệ Bưu chính viễn thông - LAT & LNG location
+// Học viện Công nghệ Bưu chính viễn thông - LATIDUTE & LONGITUDE location
 //
-// 20.9802956175709, 105.78607963699247 - Center Map location
+// 20.98121722958877, 105.78651951926564 - Center Map location
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById("VDFM_map"), {
     mapId: "99f215073d577b09",
-    center: { lat: 20.9802956175709, lng: 105.78607963699247 },
+    center: { lat: 20.98121722958877, lng: 105.78651951926564 },
     zoom: 18,
     fullscreenControl: false,
     streetViewControl: false,
