@@ -8490,7 +8490,7 @@ function initMap() {
     map,
     title: "VDFM Hanoi",
     icon: {
-      url: "./assets/VDFM_MapIcon.svg",
+      url: "https://alpha.vdfm.ga/assets/VDFM_MapIcon.svg",
       scaleSize: new google.maps.Size(50, 70),
     },
   });
