@@ -8483,6 +8483,9 @@ function initMap() {
     mapId: "99f215073d577b09",
     center: { lat: 20.9802956175709, lng: 105.78607963699247 },
     zoom: 18,
+    fullscreenControl: false,
+    streetViewControl: false,
+    mapTypeControl: false,
   });
 
   new google.maps.Marker({
