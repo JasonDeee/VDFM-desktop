@@ -8473,13 +8473,25 @@ Dual licensed under the MIT and GPL licenses.
 //
 //
 //
+// 20.980597227612375, 105.78793084435914
+// Học viện Công nghệ Bưu chính viễn thông - LAT & LNG location
+//
+// 20.9802956175709, 105.78607963699247 - Center Map location
+
 function initMap() {
   new google.maps.Map(document.getElementById("VDFM_map"), {
     mapId: "99f215073d577b09",
-    center: { lat: 20.980597227612375, lng: 105.78793084435914 },
-    zoom: 8,
+    center: { lat: 20.9802956175709, lng: 105.78607963699247 },
+    zoom: 18,
+  });
+
+  new google.maps.Marker({
+    position: { lat: 20.980597227612375, lng: 105.78793084435914 },
+    map,
+    title: "VDFM Hanoi",
+    icon: {
+      url: "./assets/VDFM_MapIcon.svg",
+      scaleSize: new google.maps.Size(50, 70),
+    },
   });
 }
-
-// 20.980597227612375, 105.78793084435914
-// Học viện Công nghệ Bưu chính viễn thông - LAT & LNG location
