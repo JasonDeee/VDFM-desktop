@@ -1,3 +1,5 @@
+const Mapscript = document.createElement("script");
+
 Mapscript.src =
   "https://maps.googleapis.com/maps/api/js?key=AIzaSyDI1Bt5fcHnAeU5hc1Q6yswi6qwe3N0P3w&callback=initMap&v=weekly";
 Mapscript.async = true;
