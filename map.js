@@ -8481,12 +8481,12 @@ Dual licensed under the MIT and GPL licenses.
 // 20.980597227612375, 105.78793084435914
 // Học viện Công nghệ Bưu chính viễn thông - LATIDUTE & LONGITUDE location
 //
-// 20.980850880997483, 105.78731408827063 - Center Map location
+// 20.981126362422636, 105.78730872385238 - Center Map location
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById("VDFM_map"), {
     mapId: "99f215073d577b09",
-    center: { lat: 20.980850880997483, lng: 105.78731408827063 },
+    center: { lat: 20.981126362422636, lng: 105.78730872385238 },
     zoom: 18,
     fullscreenControl: false,
     streetViewControl: false,
