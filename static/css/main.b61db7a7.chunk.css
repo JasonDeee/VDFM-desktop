@@ -6,7 +6,6 @@
 
 section {
   width: 100vw;
-  min-height: 80vh;
   position: relative;
 }
 
@@ -2167,6 +2166,122 @@ svg {
   color: #151515;
 }
 
+.ThankYou {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #353535;
+  color: #e9e7e7;
+  gap: 1vw;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://i.imgur.com/0rTLeZS.jpg");
+}
+
+.ThankYou * {
+  font-family: "Be Vietnam Pro", sans-serif;
+  z-index: 2;
+}
+
+.ThankYou #overlay_matte {
+  width: 100%;
+  height: 100%;
+  background: #00000096;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.ThankYou h1 {
+  font-family: "Bebas Neue VN", cursive;
+  font-size: 15vw;
+  font-weight: 400;
+  opacity: 0.6;
+  line-height: 15vw;
+  height: 17vw;
+  margin-bottom: -2vw;
+}
+
+.ThankYou h3 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+
+.ThankYou .Hor_line {
+  background: #c9c7c7;
+  width: 38vw;
+}
+
+.ThankYou p {
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+}
+
+.ThankYou .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 3vw;
+}
+
+.ThankYou .row a {
+  text-decoration: none;
+}
+
+.ThankYou .Return_Home_Button,
+.ThankYou .Report_Button {
+  padding: 20px 40px 20px 40px;
+  text-align: center;
+  width: calc(4vw + 120px);
+  -webkit-transition: all 0.45s ease-out;
+  transition: all 0.45s ease-out;
+  text-decoration: none;
+  color: #e9e7e7;
+  outline: solid 3px #151515;
+  outline-offset: -3px;
+}
+
+.ThankYou .Return_Home_Button {
+  background: #151515;
+}
+
+.ThankYou .Report_Button {
+  color: #151515;
+}
+
+.ThankYou .Report_Button:hover,
+.ThankYou .Return_Home_Button:hover {
+  background: #e9e7e7e7;
+  color: #151515;
+}
+
 .WhatNew,
 .DigitalFashion,
 .InVietNam,
@@ -3611,4 +3726,326 @@ svg {
 
 .Contact #Map_Header #info_windows a:hover {
   opacity: 0.4;
+}
+
+.Contact #Contact_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 96vw;
+  padding: 50px;
+  min-height: 0;
+}
+
+.Contact #Contact_title h1 {
+  font-weight: 100;
+}
+
+.Contact #Contact_title .mailIcon2 {
+  width: 150px;
+  height: 50px;
+  background-image: url(../Vectors/MailIcon2.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-filter: invert(0.6);
+  filter: invert(0.6);
+}
+
+.Contact #Contact_Info {
+  width: 96vw;
+  background: #f1f1f1;
+  min-height: 20vh;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.Contact .Contact_col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 512px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  color: #292929;
+  position: relative;
+}
+
+.Contact .Contact_col h2 {
+  font-weight: 400;
+  font-size: 2.44rem;
+  text-transform: uppercase;
+}
+
+.Contact .Contact_col a {
+  -webkit-transition: all 0.35s ease-out;
+  transition: all 0.35s ease-out;
+  color: #292929;
+}
+
+.Contact .Contact_col p {
+  max-width: 400px;
+}
+
+.Contact .Contact_col a:hover {
+  opacity: 0.4;
+}
+
+.Contact .Contact_col #Email {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 1.56rem;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.Contact .Contact_col #Email:hover {
+  letter-spacing: 2px;
+}
+
+.Contact #Coop {
+  text-align: left;
+}
+
+.Contact #Form {
+  padding-left: 30px;
+}
+
+.Contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 512px;
+  margin-top: 10px;
+}
+
+.Contact form .name-input {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.Contact form input,
+.Contact form textarea {
+  width: 100%;
+  border: none;
+  background: #d9d9d9;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.25rem;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.Contact form input {
+  height: 50px;
+  padding-top: 20px;
+}
+
+.Contact form textarea {
+  height: 200px;
+  overflow-y: scroll;
+  padding-bottom: 10px;
+  resize: none;
+  border-top: solid 40px #d9d9d9;
+}
+
+.Contact form label {
+  text-align: left;
+  position: absolute;
+  left: 10px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  color: #292929;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.Contact form button {
+  width: 100px;
+  height: 50px;
+  position: relative;
+  background: #292929;
+  border: none;
+  color: #e9e7e7;
+  font-size: 1.44rem;
+  font-weight: 100;
+  cursor: pointer;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.Contact form button:hover {
+  background: #656565;
+}
+
+.Contact form input:focus,
+.Contact form textarea:focus,
+.Contact form input:hover,
+.Contact form textarea:hover,
+.Contact form input:valid,
+.Contact form textarea:valid {
+  outline: none;
+  background: #b1b1b1;
+}
+
+.Contact form input:focus + label,
+.Contact form textarea:focus + label,
+.Contact form input:valid + label,
+.Contact form textarea:valid + label {
+  color: #29292996;
+  height: 40px;
+}
+
+.Contact form textarea:focus,
+.Contact form textarea:valid,
+.Contact form textarea:hover {
+  border-top: solid 40px #b1b1b1;
+}
+
+.Contact form input:focus,
+.Contact form input:valid {
+  height: 80px;
+}
+
+.Contact #loadingcirle {
+  display: none;
+  overflow: visible;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 68%;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  -webkit-animation: RoateCircle 2s linear 0s infinite forwards;
+  animation: RoateCircle 2s linear 0s infinite forwards;
+}
+
+.Contact .loadingcirle-1 {
+  fill: none;
+  stroke: #e9e7e7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 20px;
+  stroke-dasharray: 500px;
+  stroke-dashoffset: 500px;
+  -webkit-animation: loadingcirle 2s ease-in-out 0s infinite forwards alternate;
+  animation: loadingcirle 2s ease-in-out 0s infinite forwards alternate;
+}
+
+@-webkit-keyframes RoateCircle {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes RoateCircle {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loadingcirle {
+  0% {
+    stroke-dasharray: 400px;
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dasharray: 600px;
+    stroke-dashoffset: 400px;
+  }
+}
+
+@keyframes loadingcirle {
+  0% {
+    stroke-dasharray: 400px;
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dasharray: 600px;
+    stroke-dashoffset: 400px;
+  }
 }
