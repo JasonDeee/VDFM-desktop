@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 239.62 239.61">
+    <defs>
+        <style>
+            .loadingcirle-1 {
+                fill: none;
+                stroke: #e9e7e7;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 20px;
+                stroke-dasharray: 49.28 49.28;
+            }
+        </style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <circle class="loadingcirle-1" cx="119.81" cy="119.81" r="109.81" />
+        </g>
+    </g>
+</svg>
