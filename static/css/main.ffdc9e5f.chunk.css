@@ -1930,6 +1930,10 @@ svg {
   font-size: 0.8rem;
 }
 
+.Footer a h5:hover {
+  opacity: 0.4;
+}
+
 .Footer p {
   color: #e9e7e7;
   letter-spacing: 0.03rem;
