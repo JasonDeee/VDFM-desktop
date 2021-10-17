@@ -2680,6 +2680,7 @@ svg {
   line-height: 2.5rem;
   margin-bottom: 10px;
   font-weight: 300;
+  max-width: 620px;
 }
 
 .WhatNew .OutBoundLayout .contents .meta,
