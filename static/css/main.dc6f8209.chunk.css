@@ -1908,6 +1908,7 @@ svg {
   color: #e9e7e7;
   padding-top: 50px;
   padding-bottom: 50px;
+  z-index: 99;
 }
 
 .Footer .row {
