@@ -166,7 +166,9 @@ svg {
   background: #e9e7e7;
   width: 100%;
   min-height: 60px;
-  height: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   position: absolute;
   top: 0;
   display: -webkit-box;
@@ -183,6 +185,7 @@ svg {
   -ms-flex-pack: center;
   justify-content: center;
   gap: 40px;
+  padding: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
   -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
@@ -1305,6 +1308,10 @@ svg {
   transition: all 0.8s cubic-bezier(0.15, 0, 0, 1);
 }
 
+.HomePage .OutBound_item .descriptions {
+  margin-bottom: 40px;
+}
+
 .HomePage .InBound_item {
   width: 100%;
   min-height: 110px;
@@ -1834,6 +1841,66 @@ svg {
   background: brown;
 }
 
+@media screen and (max-width: 960px) {
+  .HomePage #sec2 {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .HomePage #sec2 .row {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .HomePage #sec2 #right_col {
+    display: none;
+  }
+  .HomePage #sec2 #left_col {
+    max-width: 88%;
+    width: 88%;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .HomePage #sec3 .even {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .HomePage #sec4 .grid {
+    -ms-grid-columns: (1fr) [2];
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .HomePage .thumbnail_1x1 {
+    display: none;
+  }
+  .HomePage .OutBound_item .descriptions {
+    margin-bottom: 20px;
+  }
+  .HomePage #sec3 .InBound_item .title {
+    max-width: 68vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .HomePage #sec4 .grid {
+    -ms-grid-columns: (1fr) [1];
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+}
+
 .Footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1854,6 +1921,7 @@ svg {
   color: #e9e7e7;
   padding-top: 50px;
   padding-bottom: 50px;
+  z-index: 88;
 }
 
 .Footer .row {
@@ -1928,6 +1996,10 @@ svg {
   color: #e9e7e7;
   font-weight: 400;
   font-size: 0.8rem;
+}
+
+.Footer a h5:hover {
+  opacity: 0.4;
 }
 
 .Footer p {
@@ -2060,6 +2132,26 @@ svg {
   margin-top: 0;
 }
 
+@media screen and (max-width: 1024px) {
+  .Footer .row {
+    width: 96vw;
+    padding-bottom: 200px;
+  }
+  .Footer .Logos {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+  .Footer .About_Us {
+    max-width: 50%;
+  }
+  .Footer .Copyrights {
+    text-align: center;
+  }
+}
+
 .FourOhFour {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -2157,6 +2249,7 @@ svg {
 }
 
 .FourOhFour .Report_Button {
+  background: #ffffff20;
   color: #151515;
 }
 
@@ -2164,6 +2257,26 @@ svg {
 .FourOhFour .Return_Home_Button:hover {
   background: #e9e7e7e7;
   color: #151515;
+}
+
+@media screen and (max-width: 1024px) {
+  .FourOhFour h1 {
+    font-size: 10rem;
+    line-height: 12rem;
+    height: auto;
+    text-align: center;
+  }
+  .FourOhFour .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .FourOhFour .Return_Home_Button,
+  .FourOhFour .Report_Button {
+    width: 240px;
+  }
 }
 
 .ThankYou {
@@ -2282,6 +2395,19 @@ svg {
   color: #151515;
 }
 
+@media screen and (max-width: 1024px) {
+  .ThankYou h1 {
+    font-size: 10rem;
+    line-height: 12rem;
+    height: auto;
+    text-align: center;
+  }
+  .ThankYou .Return_Home_Button {
+    margin-top: 20px;
+    width: 240px;
+  }
+}
+
 .WhatNew,
 .DigitalFashion,
 .InVietNam,
@@ -2351,9 +2477,12 @@ svg {
 .Contact #Video_Header video {
   pointer-events: none;
   width: 100%;
+  height: 135%;
   position: absolute;
   top: 0;
   left: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .WhatNew #Video_Header h1,
@@ -2595,6 +2724,8 @@ svg {
 .About .OutBoundLayout *,
 .Contact .OutBoundLayout * {
   font-family: "Be Vietnam Pro", sans-serif;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1), color 0.3s ease-out;
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1), color 0.3s ease-out;
 }
 
 .WhatNew .OutBoundLayout .Item,
@@ -2616,6 +2747,7 @@ svg {
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
+  max-width: 100%;
   -webkit-transition: all 0.8s cubic-bezier(0.15, 0, 0, 1);
   transition: all 0.8s cubic-bezier(0.15, 0, 0, 1);
 }
@@ -2680,6 +2812,7 @@ svg {
   line-height: 2.5rem;
   margin-bottom: 10px;
   font-weight: 300;
+  max-width: 620px;
 }
 
 .WhatNew .OutBoundLayout .contents .meta,
@@ -2787,8 +2920,6 @@ svg {
   flex-direction: column;
   -ms-grid-columns: (minmax(480px, 1fr)) [auto-fit];
   grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-  -ms-grid-rows: (1fr) [auto-fill];
-  grid-template-rows: repeat(auto-fill, 1fr);
   gap: 15px;
 }
 
@@ -2833,12 +2964,12 @@ svg {
   letter-spacing: 0;
 }
 
-.WhatNew .InBoundLayout .Item:nth-last-child(2),
-.DigitalFashion .InBoundLayout .Item:nth-last-child(2),
-.InVietNam .InBoundLayout .Item:nth-last-child(2),
-.VirtualInfluencer .InBoundLayout .Item:nth-last-child(2),
-.About .InBoundLayout .Item:nth-last-child(2),
-.Contact .InBoundLayout .Item:nth-last-child(2) {
+.WhatNew .InBoundLayout .even,
+.DigitalFashion .InBoundLayout .even,
+.InVietNam .InBoundLayout .even,
+.VirtualInfluencer .InBoundLayout .even,
+.About .InBoundLayout .even,
+.Contact .InBoundLayout .even {
   grid-area: even;
   grid-column: span 2;
   grid-row: span 1;
@@ -3066,6 +3197,53 @@ svg {
   background-image: url("https://i1.wp.com/4chionlifestyle.com/wp-content/uploads/2018/10/ROCKY-GATHERCOLE-StyleFW-SS19-4Chion-Lifestyle-Photo-Albert-E-22.jpg?w=1500&ssl=1");
 }
 
+@media screen and (max-width: 1024px) {
+  .WhatNew .OutBoundLayout .contents .descriptions,
+  .DigitalFashion .OutBoundLayout .contents .descriptions,
+  .InVietNam .OutBoundLayout .contents .descriptions,
+  .VirtualInfluencer .OutBoundLayout .contents .descriptions,
+  .About .OutBoundLayout .contents .descriptions,
+  .Contact .OutBoundLayout .contents .descriptions {
+    -webkit-line-clamp: 3;
+  }
+  .WhatNew .OutBoundLayout .contents .meta,
+  .DigitalFashion .OutBoundLayout .contents .meta,
+  .InVietNam .OutBoundLayout .contents .meta,
+  .VirtualInfluencer .OutBoundLayout .contents .meta,
+  .About .OutBoundLayout .contents .meta,
+  .Contact .OutBoundLayout .contents .meta {
+    margin-bottom: 10px;
+  }
+  .WhatNew .InBoundLayout,
+  .DigitalFashion .InBoundLayout,
+  .InVietNam .InBoundLayout,
+  .VirtualInfluencer .InBoundLayout,
+  .About .InBoundLayout,
+  .Contact .InBoundLayout {
+    -ms-grid-columns: (minmax(360px, 1fr)) [auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .WhatNew .OutBoundLayout .contents .descriptions,
+  .DigitalFashion .OutBoundLayout .contents .descriptions,
+  .InVietNam .OutBoundLayout .contents .descriptions,
+  .VirtualInfluencer .OutBoundLayout .contents .descriptions,
+  .About .OutBoundLayout .contents .descriptions,
+  .Contact .OutBoundLayout .contents .descriptions {
+    -webkit-line-clamp: 2;
+  }
+  .WhatNew .InBoundLayout .even,
+  .DigitalFashion .InBoundLayout .even,
+  .InVietNam .InBoundLayout .even,
+  .VirtualInfluencer .InBoundLayout .even,
+  .About .InBoundLayout .even,
+  .Contact .InBoundLayout .even {
+    grid-column: span 1;
+  }
+}
+
 .WhatNew #Carrousel_Fade {
   height: 80vh;
   background: #292929;
@@ -3279,7 +3457,7 @@ svg {
 }
 
 .InVietNam #IMG5 {
-  background-image: url("https://w.wallhaven.cc/full/dg/wallhaven-dg7xxo.jpg");
+  background-image: url("https://i.imgur.com/9TeFgHd.jpg");
 }
 
 .About #Carrousel_Fade {
@@ -3347,7 +3525,7 @@ svg {
 }
 
 .About #IMG3 {
-  background-image: url("http://infocusrecruitment.co.uk/wp-content/uploads/2015/12/40571020.jpg");
+  background-image: url("https://i.imgur.com/CbgaxYw.jpg");
 }
 
 .About #IMG4 {
@@ -3662,6 +3840,63 @@ svg {
   z-index: 5;
 }
 
+@media screen and (max-width: 1024px) {
+  .About #Stories .Hor_line {
+    width: 62vw;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .About #VDFM_Points {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .About #Facebook {
+    margin-right: 0;
+  }
+  .About #Instagram {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .About #Stories .stories_layout {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .About #Stories .stories_col {
+    text-align: left;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .About #Stories #col2 {
+    margin-top: 0;
+  }
+  .About .Social_Row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .About #Instagram {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
 .Contact #Map_Header {
   height: 80vh;
   -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
@@ -3690,6 +3925,8 @@ svg {
   bottom: 0;
   margin: auto;
   z-index: 6;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
   color: #e9e7e7;
   text-align: right;
   padding: 30px;
@@ -3862,7 +4099,8 @@ svg {
   -ms-flex-pack: start;
   justify-content: flex-start;
   gap: 20px;
-  width: 512px;
+  max-width: 512px;
+  width: 68vw;
   margin-top: 10px;
 }
 
@@ -4055,5 +4293,126 @@ svg {
   100% {
     stroke-dasharray: 600px;
     stroke-dashoffset: 400px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Contact #Contact_Info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .Contact #Coop {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .Contact .Ver_line {
+    width: 62vw;
+    min-height: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .Contact #Form {
+    padding-left: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .Contact #Map_Header #info_windows {
+    width: 62vw;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Contact #Contact_Info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .Contact #Coop {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 96vw;
+  }
+  .Contact .Ver_line {
+    width: 62vw;
+    min-height: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .Contact #Form {
+    padding-left: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 96vw;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .liB {
+    font-size: 0.65rem;
+    text-align: center;
+  }
+  .left_nav,
+  .right_nav {
+    display: none;
+  }
+  .main_nav {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .liB {
+    font-size: 0.45rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Pop_Up {
+    display: none;
   }
 }
