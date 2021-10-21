@@ -14,7 +14,7 @@ const Mapscripts = document.createElement("script");
 Mapscripts.src =
   "https://maps.googleapis.com/maps/api/js?key=AIzaSyDI1Bt5fcHnAeU5hc1Q6yswi6qwe3N0P3w&callback=initMap&v=weekly";
 Mapscripts.async = true;
-document.body.appendChild(Mapscripts);
+document.head.appendChild(Mapscripts);
 
 Mapscripts.addEventListener("load", () => {
   function initMap() {
