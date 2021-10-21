@@ -9,13 +9,13 @@
 // 20.980810845015128, 105.78716922432768 - Center Map location
 
 //
-const Mapscripts = document.createElement("script");
+// const Mapscripts = document.createElement("script");
 
-Mapscripts.src =
-  "https://maps.googleapis.com/maps/api/js?key=AIzaSyDI1Bt5fcHnAeU5hc1Q6yswi6qwe3N0P3w&callback=initMap&v=weekly";
-Mapscripts.async = true;
-document.head.appendChild(Mapscripts);
-console.log(Mapscripts);
+// Mapscripts.src =
+//   "https://maps.googleapis.com/maps/api/js?key=AIzaSyDI1Bt5fcHnAeU5hc1Q6yswi6qwe3N0P3w&callback=initMap&v=weekly";
+// Mapscripts.async = true;
+// document.head.appendChild(Mapscripts);
+// console.log(Mapscripts);
 // Mapscripts.addEventListener("load", () => {
 function initMap() {
   const map = new google.maps.Map(document.getElementById("VDFM_map"), {
