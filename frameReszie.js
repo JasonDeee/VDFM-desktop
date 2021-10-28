@@ -1,10 +1,9 @@
 const theFrame = document.querySelector(".MainNews iframe");
 
 function ResizeIframe() {
-  console.log(theFrame.contentWindow.document.documentElement.clientHeight);
+  console.log(theFrame.contentWindow.document.body.clientHeight);
   theFrame.style.height =
-    theFrame.contentWindow.document.document.documentElement.clientHeight +
-    "px";
+    theFrame.contentWindow.document.body.clientHeight + "px";
 }
 ResizeIframe();
 window.addEventListener("resize", ResizeIframe);
