@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 239.62 239.61">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 239.62 239.61" class="loadingcirle">
     <defs>
         <style>
             .loadingcirle-1 {
@@ -8,6 +8,37 @@
                 stroke-linejoin: round;
                 stroke-width: 20px;
                 stroke-dasharray: 49.28 49.28;
+                animation: loadingcirle 2s ease-in-out 0s infinite forwards alternate;
+
+            }
+
+            .loadingcirle {
+                animation: RoateCircle 2s linear 0s infinite forwards;
+
+            }
+
+            @keyframes RoateCircle {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes loadingcirle {
+                0% {
+                    stroke-dasharray: 430px;
+
+                    stroke-dashoffset: 0px;
+                }
+
+                100% {
+                    stroke-dasharray: 600px;
+
+                    stroke-dashoffset: 500px;
+                }
             }
         </style>
     </defs>
