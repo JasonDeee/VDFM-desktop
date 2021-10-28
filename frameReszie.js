@@ -1,5 +1,10 @@
-let theFrame = document.querySelector(".MainNews iframe");
+const theFrame = document.querySelector(".MainNews iframe");
 
-console.log(theFrame.contentWindow.document.documentElement.scrollHeight);
-theFrame.style.height =
-  theFrame.contentWindow.document.documentElement.scrollHeight + "px";
+function ResizeIframe() {
+  console.log(theFrame.contentWindow.document.documentElement.scrollHeight);
+  theFrame.style.height =
+    theFrame.contentWindow.document.documentElement.scrollHeight + "px";
+}
+ResizeIframe();
+
+window.addEventListener("resize", ResizeIframe);
