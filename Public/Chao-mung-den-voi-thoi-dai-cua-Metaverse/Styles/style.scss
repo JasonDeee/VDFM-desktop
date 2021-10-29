@@ -55,8 +55,11 @@ p {
   height: fit-content;
   position: relative;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   background: #00000015;
+  margin-bottom: 10px;
 
   img {
     width: 100%;
