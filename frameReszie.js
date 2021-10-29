@@ -13,4 +13,4 @@ function ResizeIframe() {
 }
 ResizeIframe();
 
-theFrame.addEventListener("transitionend", ResizeIframe);
+window.addEventListener("resize", ResizeIframe);
