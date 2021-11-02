@@ -88,6 +88,15 @@
     </p>
   </body>
   <script type="text/javascript">
+    window.addEventListener("resize", () => {
+      window.parent.postMessage(
+        {
+          innerHeight: document.body.offsetHeight,
+        },
+        "*"
+      );
+    });
+    console.log(document.body.clientHeight);
     window.addEventListener(
       "message",
       function (event) {
@@ -101,7 +110,7 @@
           message: "The message is being set up here",
           hide: "dbhchat",
           show: "dbhchat",
-          innerHeight: document.body.clientHeight,
+          innerHeight: document.body.offsetHeight,
         },
         "*"
       );
