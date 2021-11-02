@@ -1,4 +1,4 @@
-const theFrame = document.querySelector(".MainNews iframe");
+let theFrame = document.querySelector(".MainNews iframe");
 
 function ResizeIframe() {
   console.log(theFrame.contentWindow.document.body.clientHeight);

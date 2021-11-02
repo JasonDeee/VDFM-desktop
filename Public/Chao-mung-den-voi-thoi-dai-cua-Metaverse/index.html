@@ -2,25 +2,6 @@
 
 <html lang="en">
   <head>
-    <script type="text/javascript">
-      window.addEventListener(
-        "message",
-        function (event) {
-          console.log(event);
-        },
-        false
-      );
-      if (window && window.parent) {
-        window.parent.postMessage(
-          {
-            message: "The message is being set up here",
-            hide: "dbhchat",
-            show: "dbhchat",
-          },
-          "*"
-        );
-      }
-    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -106,4 +87,24 @@
       thuật số của thế giới thời trang
     </p>
   </body>
+  <script type="text/javascript">
+    window.addEventListener(
+      "message",
+      function (event) {
+        console.log(event);
+      },
+      false
+    );
+    if (window && window.parent) {
+      window.parent.postMessage(
+        {
+          message: "The message is being set up here",
+          hide: "dbhchat",
+          show: "dbhchat",
+          innerHeight: document.body.clientHeight,
+        },
+        "*"
+      );
+    }
+  </script>
 </html>
