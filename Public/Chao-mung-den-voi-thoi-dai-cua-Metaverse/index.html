@@ -91,6 +91,7 @@
     window.addEventListener("resize", () => {
       window.parent.postMessage(
         {
+          code: "NewsTemplate",
           innerHeight: document.body.offsetHeight,
         },
         "*"
@@ -107,9 +108,7 @@
     if (window && window.parent) {
       window.parent.postMessage(
         {
-          message: "The message is being set up here",
-          hide: "dbhchat",
-          show: "dbhchat",
+          code: "NewsTemplate",
           innerHeight: document.body.offsetHeight,
         },
         "*"
