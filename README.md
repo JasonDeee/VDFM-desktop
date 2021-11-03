@@ -1,4 +1,4 @@
-// v1.4 All Digital Fashion Sort Added but not Served user Yet
+// v1.4 All DigitalFashion's Sorts Added but not Served user Yet
 
 // v1.3 Responsive Mounted in All Element, but still not compatible with Mobile.
 
