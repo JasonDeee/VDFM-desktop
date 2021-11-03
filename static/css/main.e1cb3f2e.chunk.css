@@ -3134,7 +3134,8 @@ svg {
 .About .InBoundLayout .Item,
 .Contact .InBoundLayout .Item,
 .NewsTemp .InBoundLayout .Item {
-  min-height: 480px;
+  min-height: 280px;
+  height: 62vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
