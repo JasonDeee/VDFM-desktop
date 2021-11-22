@@ -1,4 +1,142 @@
 @charset "UTF-8";
+.FullPageLoader {
+  z-index: 999;
+}
+
+.FullPageLoader,
+.InPageLoader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #e9e7e7;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  -webkit-transition: opacity 0.8s cubic-bezier(0.25, 0, 0, 1),
+    height 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: opacity 0.8s cubic-bezier(0.25, 0, 0, 1),
+    height 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.FullPageLoader .Loader,
+.InPageLoader .Loader {
+  width: 5vw;
+  height: 5vw;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.FullPageLoader .Loader svg,
+.InPageLoader .Loader svg {
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+}
+
+.FullPageLoader .Messages,
+.InPageLoader .Messages {
+  max-width: 62vw;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-top: 50px;
+}
+
+.loader-1,
+.loader-2 {
+  fill: none;
+  stroke-linejoin: round;
+}
+
+.loader-1 {
+  stroke: #e9e7e7;
+  stroke-width: 80px;
+}
+
+.loader-2 {
+  stroke: #292929;
+  stroke-width: 60px;
+  stroke-dasharray: 1500px;
+  -webkit-animation: LoaderPath 2s ease-in-out infinite alternate,
+    LoaderCircle 1.5s linear infinite;
+  animation: LoaderPath 2s ease-in-out infinite alternate,
+    LoaderCircle 1.5s linear infinite;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+@-webkit-keyframes LoaderPath {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1200px;
+  }
+}
+
+@keyframes LoaderPath {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1200px;
+  }
+}
+
+@-webkit-keyframes LoaderCircle {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes LoaderCircle {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.Pageloader_FadingOut {
+  opacity: 0;
+  height: 33vh;
+}
+
+.Pageloader_Hidden {
+  display: none;
+}
+
 .App {
   width: 100vw;
   height: 100vh;
@@ -116,6 +254,99 @@ svg {
   z-index: 99;
   -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1), width 0s linear;
   transition: all 0.8s cubic-bezier(0.25, 0, 0, 1), width 0s linear;
+}
+
+.nav_container .Notifier {
+  width: 100vw;
+  min-height: 50px;
+  background: #e9e7e7;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 15vw 0 15vw;
+  color: #151515;
+}
+
+.nav_container .Notifier .Content {
+  max-width: 74%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 10px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 10px 0 10px 0;
+}
+
+.nav_container .Notifier .CovidEmote {
+  background-image: url(../Vectors/CovidEmote_1.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+}
+
+.nav_container .Notifier .CloseButton {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-self: center;
+}
+
+.nav_container .Notifier .CloseButton div {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #151515;
+}
+
+.nav_container .Notifier .CloseButton div:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.nav_container .Notifier .CloseButton div:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.nav_container .Notifier:hover .CloseButton {
+  opacity: 0.4;
+}
+
+.nav_container .thumbnail {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .Nav_overlay {
@@ -252,13 +483,16 @@ svg {
 }
 
 .Pop_Elements .column .tag_description {
-  width: 100%;
+  width: auto;
   margin-left: 5px;
   opacity: 0;
   -webkit-transition: all 1.3s cubic-bezier(0.25, 0, 0, 1);
   transition: all 1.3s cubic-bezier(0.25, 0, 0, 1);
   z-index: 2;
-  position: relative;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
 }
 
 .Pop_Elements .column .tag_description::after {
@@ -323,10 +557,10 @@ svg {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 20px;
+  overflow: hidden;
 }
 
-.Pop_Elements .Pop_image::before {
+.Pop_Elements .Pop_image::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -350,7 +584,12 @@ svg {
   background-size: 130%;
 }
 
-.Pop_Elements .Pop_image:hover::before,
+.Pop_Elements .Pop_image:hover .thumbnail {
+  -webkit-transform: scale(1.23);
+  transform: scale(1.23);
+}
+
+.Pop_Elements .Pop_image:hover::after,
 .Pop_Elements .Pop_image:hover .tag_description {
   opacity: 1;
 }
@@ -384,7 +623,10 @@ svg {
 #Tin-moi #Latest {
   width: 360px;
   height: 240px;
-  background-image: url("https://images.pexels.com/photos/291762/pexels-photo-291762.jpeg?crop=entropy&cs=srgb&dl=pexels-freestocksorg-291762.jpg&fit=crop&fm=jpg&h=853&w=1280");
+}
+
+#Tin-moi #Latest .thumbnail {
+  background-image: url("https://teknoloji.news/wp-content/uploads/2021/10/CROPPED-scaled-1.jpeg");
 }
 
 #Tin-moi #Trending {
@@ -731,6 +973,54 @@ svg {
   transform: translateY(0);
   -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
   transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.liB samp {
+  display: inline-block;
+  font-size: 1rem;
+  -webkit-animation: DotAni 3s cubic-bezier(0.25, 0, 0, 1) infinite alternate;
+  animation: DotAni 3s cubic-bezier(0.25, 0, 0, 1) infinite alternate;
+  -webkit-transform-origin: -30% 70%;
+  transform-origin: -30% 70%;
+  margin-right: -7px;
+}
+
+@-webkit-keyframes DotAni {
+  0% {
+    -webkit-transform: scale(0) rotate(180deg);
+    transform: scale(0) rotate(180deg);
+  }
+  40% {
+    -webkit-transform: scale(0) rotate(180deg);
+    transform: scale(0) rotate(180deg);
+  }
+  60% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes DotAni {
+  0% {
+    -webkit-transform: scale(0) rotate(180deg);
+    transform: scale(0) rotate(180deg);
+  }
+  40% {
+    -webkit-transform: scale(0) rotate(180deg);
+    transform: scale(0) rotate(180deg);
+  }
+  60% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
 }
 
 .spanB {
@@ -1159,7 +1449,7 @@ svg {
 #ISlot1 {
   background-position: top;
   background-size: cover;
-  background-image: url("https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?crop=entropy&cs=srgb&dl=pexels-evg-culture-1126993.jpg&fit=crop&fm=jpg&h=1280&w=1920");
+  background-image: url("https://issue.vdfm.ga/Releases/Ky-nguyen-Thoi-trang-Ky-thuat-so/Images/header_pic.jpg");
 }
 
 #ISlot2 {
@@ -1285,7 +1575,7 @@ svg {
 }
 
 .HomePage #sec2 #sticky1 .thumbnail_1x1 {
-  background-image: url("https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?crop=entropy&cs=srgb&dl=pexels-yuri-manei-2690323.jpg&fit=crop&fm=jpg&h=1280&w=1280");
+  background-image: url("https://issue.vdfm.ga/Releases/Ky-nguyen-Thoi-trang-Ky-thuat-so/Images/header_pic.jpg");
 }
 
 .HomePage #sec2 #sticky2 .thumbnail_1x1 {
@@ -1649,7 +1939,7 @@ svg {
 .HomePage #sec3 .InBound_item {
   aspect-ratio: unset;
   width: auto;
-  height: 480px;
+  height: 62vh;
 }
 
 .HomePage #sec3 .InBound_item .thumbnail {
@@ -2732,6 +3022,7 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -2954,6 +3245,7 @@ svg {
   padding-bottom: 150px;
   display: -ms-grid;
   display: grid;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -2980,7 +3272,7 @@ svg {
 .About .InBoundLayout .Item,
 .Contact .InBoundLayout .Item,
 .NewsTemp .InBoundLayout .Item {
-  min-height: 480px;
+  min-height: 62vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3400,7 +3692,20 @@ svg {
 
 .NewsTemp #NewsHeaderTemp .NewsThumb::after {
   content: "";
-  background: #00000056;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#00000026),
+    color-stop(50%, #00000026),
+    to(#000000e6)
+  );
+  background: linear-gradient(
+    to bottom,
+    #00000026 0%,
+    #00000026 50%,
+    #000000e6
+  );
   width: 100%;
   height: 100%;
   position: absolute;
@@ -3631,6 +3936,8 @@ svg {
 .NewsTemp #NewsLayout .MainNews iframe {
   width: 100%;
   overflow: visible;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
 }
 
 .NewsTemp #NewsLayout .DockedLayout {
@@ -3665,6 +3972,8 @@ svg {
   background-repeat: no-repeat;
   overflow: hidden;
   cursor: pointer;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .NewsTemp #NewsLayout .overlay {
@@ -3794,6 +4103,190 @@ svg {
       #e9e7e700 70%
     );
   }
+}
+
+.DigitalFashion .Sort_And_Layout {
+  width: 1024px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  border-bottom: solid 1px #292929;
+}
+
+.DigitalFashion .Sort_And_Layout .Sort_Swap {
+  width: 480px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  height: auto;
+  overflow: hidden;
+}
+
+.DigitalFashion .Sort_And_Layout .Sort_Swap_Overlay {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.DigitalFashion .Sort_And_Layout .Left_Overlay,
+.DigitalFashion .Sort_And_Layout .Right_Overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  opacity: 0;
+}
+
+.DigitalFashion .Sort_And_Layout .Left_Overlay {
+  left: 0;
+  background: linear-gradient(to right, #ffffff 0%, #ffffff00 160px);
+}
+
+.DigitalFashion .Sort_And_Layout .Right_Overlay {
+  right: 0;
+  background: linear-gradient(to left, #ffffff 0%, #ffffff00 160px);
+}
+
+.DigitalFashion .Sort_And_Layout .Left_Overlay_Active,
+.DigitalFashion .Sort_And_Layout .Right_Overlay_Active {
+  opacity: 1;
+}
+
+.DigitalFashion .Sort_And_Layout .Active_Sort_Pointer {
+  position: absolute;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  background: #292929;
+  width: 83px;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.DigitalFashion .Sort_And_Layout .Sort_Swaper {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.DigitalFashion .Sort_And_Layout .Sort_Swaper h5 {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0 10px 0 10px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #151515;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.DigitalFashion .Sort_And_Layout .Sort_Swaper h5:hover {
+  opacity: 0.4;
+}
+
+.DigitalFashion .Sort_Title {
+  position: relative;
+  width: 96vw;
+  background: #f1f1f1;
+  text-align: center;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.DigitalFashion .Sort_Title div {
+  position: relative;
+  width: 1024px;
+  padding: 50px 0 50px 0;
+}
+
+.DigitalFashion .Sort_Title h3 {
+  color: #656565;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  height: auto;
+}
+
+.DigitalFashion .Sort_Title h3::after,
+.DigitalFashion .Sort_Title h3::before {
+  content: "''";
+  margin: 0 5px 0 5px;
+}
+
+.DigitalFashion .OutBoundLayout,
+.DigitalFashion .InBoundLayout {
+  padding-top: 0;
+  margin-top: -1px;
+}
+
+.DigitalFashion #sec2 .Sort_And_Layout .LayOut_Swap {
+  width: 240px;
+  margin: 20px 0 20px 0;
 }
 
 .VirtualInfluencer #Carrousel_Fade {
