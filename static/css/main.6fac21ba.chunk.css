@@ -1613,7 +1613,7 @@ svg {
 
 .HomePage .InBound_item {
   width: 100%;
-  min-height: 110px;
+  min-height: 480px;
   aspect-ratio: calc(6 / 9);
   max-height: 100%;
   position: relative;
@@ -3092,6 +3092,7 @@ svg {
 .NewsTemp .OutBoundLayout .thumbnail_square {
   width: 33%;
   background: #c9c7c7;
+  height: calc(1024px * 0.33);
 }
 
 .WhatNew .OutBoundLayout .contents,
@@ -3549,6 +3550,15 @@ svg {
 }
 
 @media screen and (max-width: 1024px) {
+  .WhatNew .OutBoundLayout .thumbnail_square,
+  .DigitalFashion .OutBoundLayout .thumbnail_square,
+  .InVietNam .OutBoundLayout .thumbnail_square,
+  .VirtualInfluencer .OutBoundLayout .thumbnail_square,
+  .About .OutBoundLayout .thumbnail_square,
+  .Contact .OutBoundLayout .thumbnail_square,
+  .NewsTemp .OutBoundLayout .thumbnail_square {
+    height: calc(100% * 0.33);
+  }
   .WhatNew .OutBoundLayout .contents .descriptions,
   .DigitalFashion .OutBoundLayout .contents .descriptions,
   .InVietNam .OutBoundLayout .contents .descriptions,
@@ -3580,6 +3590,15 @@ svg {
 }
 
 @media screen and (max-width: 768px) {
+  .WhatNew .OutBoundLayout .thumbnail_square,
+  .DigitalFashion .OutBoundLayout .thumbnail_square,
+  .InVietNam .OutBoundLayout .thumbnail_square,
+  .VirtualInfluencer .OutBoundLayout .thumbnail_square,
+  .About .OutBoundLayout .thumbnail_square,
+  .Contact .OutBoundLayout .thumbnail_square,
+  .NewsTemp .OutBoundLayout .thumbnail_square {
+    display: none;
+  }
   .WhatNew .OutBoundLayout .contents .descriptions,
   .DigitalFashion .OutBoundLayout .contents .descriptions,
   .InVietNam .OutBoundLayout .contents .descriptions,
