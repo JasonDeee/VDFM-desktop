@@ -144,9 +144,6 @@ a {
   transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
 }
 
-a:hover {
-  opacity: 0.4;
-}
 
 .App {
   width: 100vw;
