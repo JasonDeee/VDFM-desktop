@@ -32,7 +32,7 @@ function initMap() {
     map,
     title: "VDFM Hanoi",
     icon: {
-      url: "https://alpha.vdfm.ga/assets/VDFM_MapIcon.svg",
+      url: "https://vdfm.ga/assets/VDFM_MapIcon.svg",
       scaledSize: new google.maps.Size(62, 87),
     },
     animation: google.maps.Animation.DROP,
