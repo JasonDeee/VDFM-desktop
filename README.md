@@ -1,3 +1,5 @@
+// v2.0.0 Official/ Map Need Fixing!!!
+
 // v1.4.1 First eMagazine added
 // v1.4 All DigitalFashion's Sorts Added but not Served user Yet
 
