@@ -35,8 +35,8 @@
 
 .FullPageLoader .Loader,
 .InPageLoader .Loader {
-  width: 20vw;
-  height: 20vw;
+  width: 60px;
+  height: 60px;
   position: relative;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -47,7 +47,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: -5vw;
 }
 
 .FullPageLoader .Loader svg,
