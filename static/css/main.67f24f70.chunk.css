@@ -1473,19 +1473,19 @@ svg {
 #ISlot1 {
   background-position: top;
   background-size: cover;
-  background-image: url("https://issue.vdfm.ga/Releases/Ky-nguyen-Thoi-trang-Ky-thuat-so/Images/header_pic.jpg");
+  background-image: url("http://issue.jasond.live/Releases/Ky-nguyen-Thoi-trang-Ky-thuat-so/Images/header_pic.jpg");
 }
 
 #ISlot2 {
   background-position: 50% 20%;
   background-size: cover;
-  background-image: url("https://issue.vdfm.ga/Releases/Tra-tien-that-cho-trang-phuc-ao/Images/graphic1.png");
+  background-image: url("https://issue.jasond.live/Releases/Tra-tien-that-cho-trang-phuc-ao/Images/graphic1.png");
 }
 
 #ISlot3 {
   background-position: 50% 30%;
   background-size: cover;
-  background-image: url("https://issue.vdfm.ga/Releases/KHOI-NGUON-CUA-VIRTUAL-INFLUENCER/Images/header-100.jpg");
+  background-image: url("https://issue.jasond.live/Releases/KHOI-NGUON-CUA-VIRTUAL-INFLUENCER/Images/header-100.jpg");
 }
 
 .HomePage #sec2 {
@@ -1599,7 +1599,7 @@ svg {
 }
 
 .HomePage #sec2 #sticky1 .thumbnail_1x1 {
-  background-image: url("https://issue.vdfm.ga/Releases/Ky-nguyen-Thoi-trang-Ky-thuat-so/Images/header_pic.jpg");
+  background-image: url("https://issue.jasond.live/Releases/Ky-nguyen-Thoi-trang-Ky-thuat-so/Images/header_pic.jpg");
 }
 
 .HomePage #sec2 #sticky2 .thumbnail_1x1 {
@@ -5498,4 +5498,3 @@ svg {
     display: none;
   }
 }
-/*# sourceMappingURL=App.css.map */
